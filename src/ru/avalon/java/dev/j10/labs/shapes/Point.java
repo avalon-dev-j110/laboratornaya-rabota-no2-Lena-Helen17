@@ -27,11 +27,14 @@ public interface Point {
      * Абсциссой точки A называется координата этой точки на
      * оси X в прямоугольной системе координат.
      *
+     * @param x1
      * @return x-координату точки
      *
      * @see <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%B1%D1%81%D1%86%D0%B8%D1%81%D1%81%D0%B0">Абсцисса</a>
      */
-    float getX();
+    float getX(float x1, float x2) ;
+        
+    
 
     /**
      * Возвращает ординату точки.
@@ -43,5 +46,5 @@ public interface Point {
      *
      * @see <a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%B0">Ордината</a>
      */
-    float getY();
+    float getY(float y1, float y2);
 }
