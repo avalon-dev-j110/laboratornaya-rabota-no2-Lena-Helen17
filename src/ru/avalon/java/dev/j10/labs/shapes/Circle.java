@@ -8,22 +8,26 @@ package ru.avalon.java.dev.j10.labs.shapes;
  *
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BA%D1%80%D1%83%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">Окружность</a>
  */
-public class Circle extends PointClass implements Ellipse {
+public class Circle  implements Ellipse {
 
-    public Circle(float tochka1X, float tochka1Y, float tochka2X, float tochka2Y) {
-        super(tochka1X, tochka1Y, tochka2X, tochka2Y);
+    private PointClass point1;
+    private float radius;
+
+
+    public Circle(PointClass point1, float radius) {
+        this.point1 = point1;
+        this.radius = radius;
     }
-    
-   
+
+
     @Override
     public float getLength() {
-    return (float) (Math.PI * getLengthLine(getX(getTochka1X(),getTochka2X()), getY(getTochka1Y(),getTochka2Y())));
+    return (float) (Math.PI * 2 * radius);
     }
 
     @Override
     public float getArea() {
-        float radius = (float) (getLengthLine(getX(getTochka1X(),getTochka2X()), getY(getTochka1Y(),getTochka2Y()))/2);
-       return (float) (Math.PI * radius * radius );
+      return (float) (Math.PI * radius * radius );
     }
 
     /*
